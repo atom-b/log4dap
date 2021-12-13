@@ -1,0 +1,19 @@
+plugins {
+    // Apply the application plugin to add support for building a CLI application in Java.
+    id 'application'
+}
+
+repositories {
+    // Use JCenter for resolving dependencies.
+    jcenter()
+}
+
+dependencies {
+    implementation 'com.unboundid:unboundid-ldapsdk:6.0.3'
+    implementation 'org.springframework:spring-web:5.3.13'
+}
+
+application {
+    mainClass = 'log4dap.LDAPServer'
+    applicationName = 'log4dap'
+}

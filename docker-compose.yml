@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  log4dap:
+    image: log4dap
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 1337:1337
